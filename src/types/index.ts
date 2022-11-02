@@ -117,3 +117,11 @@ export interface TextAlignProps {
   rightText?: boolean
   justifyText?: boolean
 }
+
+export interface UnitPaddingProps {
+  unitPadding?: number
+  unitPaddingAbove?: number
+  unitPaddingBelow?: number
+  unitPaddingLeft?: number
+  unitPaddingRight?: number
+}
