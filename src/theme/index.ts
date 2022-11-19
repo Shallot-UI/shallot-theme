@@ -1,5 +1,5 @@
 import { DEFAULT_BREAKPOINTS } from './breakpoints'
-import { DEFAULT_COLORS } from './colors'
+import { DEFAULT_COLORS, DEFAULT_DARK_COLORS } from './colors'
 import { DEFAULT_FONT_SIZES } from './fontSizes'
 import { DEFAULT_TYPEFACES } from './typefaces'
 import { DEFAULT_LINE_HEIGHTS } from './lineHeights'
@@ -45,3 +45,4 @@ export const makeTheme = <
   })
 
 export const DEFAULT_THEME = makeTheme()
+export const DEFAULT_DARK_THEME = makeTheme({ colors: DEFAULT_DARK_COLORS })
