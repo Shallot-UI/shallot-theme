@@ -12,6 +12,17 @@ export type Typeface = {
 export interface BorderProps {
   borderWidth?: number
   borderColor?: string
+  borderPosition?: 'all' | 'top' | 'right' | 'bottom' | 'left'
+}
+
+export interface AnimationProps {
+  animation?:
+    | 'fadeIn'
+    | 'fadeOut'
+    | 'fadeInUp'
+    | 'fadeInDown'
+    | 'fadeInLeft'
+    | 'fadeInRight'
 }
 
 export interface ColorProps {
