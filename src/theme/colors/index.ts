@@ -1,3 +1,5 @@
+import { invertPalette } from '../../utils'
+
 const DEFAULT_PRIMARY_COLORS = {
   'Primary.100': '#DAD6FF',
   'Primary.150': '#B5ADFF',
@@ -46,7 +48,7 @@ const DEFAULT_DANGER_COLORS = {
   'Danger.500': '#7A092E',
 }
 
-const DEFAULT_LIGHT_SHADING_COLORS = {
+const DEFAULT_SHADING_COLORS = {
   'Shading.100': '#ffffff',
   'Shading.125': '#f9f9f9',
   'Shading.150': '#f0f0f0',
@@ -66,32 +68,12 @@ const DEFAULT_LIGHT_SHADING_COLORS = {
   'Shading.500': '#000000',
 }
 
-const DEFAULT_DARK_SHADING_COLORS = {
-  'Shading.500': '#ffffff',
-  'Shading.425': '#f9f9f9',
-  'Shading.450': '#f0f0f0',
-  'Shading.475': '#e4e4e4',
-  'Shading.400': '#dbdbdb',
-  'Shading.325': '#d1d1d1',
-  'Shading.350': '#c2c2c2',
-  'Shading.375': '#a8a8a8',
-  'Shading.300': '#838383',
-  'Shading.225': '#676767',
-  'Shading.250': '#4e4e4e',
-  'Shading.275': '#3b3b3b',
-  'Shading.200': '#2f2f2f',
-  'Shading.125': '#232323',
-  'Shading.150': '#1a1a1a',
-  'Shading.175': '#101010',
-  'Shading.100': '#000000',
-}
-
 export const DEFAULT_DARK_COLORS = {
-  ...DEFAULT_PRIMARY_COLORS,
-  ...DEFAULT_SUCCESS_COLORS,
-  ...DEFAULT_WARNING_COLORS,
-  ...DEFAULT_DANGER_COLORS,
-  ...DEFAULT_DARK_SHADING_COLORS,
+  ...invertPalette(DEFAULT_PRIMARY_COLORS),
+  ...invertPalette(DEFAULT_SUCCESS_COLORS),
+  ...invertPalette(DEFAULT_WARNING_COLORS),
+  ...invertPalette(DEFAULT_DANGER_COLORS),
+  ...invertPalette(DEFAULT_SHADING_COLORS),
   transparent: 'transparent',
 }
 
@@ -100,6 +82,6 @@ export const DEFAULT_COLORS = {
   ...DEFAULT_SUCCESS_COLORS,
   ...DEFAULT_WARNING_COLORS,
   ...DEFAULT_DANGER_COLORS,
-  ...DEFAULT_LIGHT_SHADING_COLORS,
+  ...DEFAULT_SHADING_COLORS,
   transparent: 'transparent',
 }

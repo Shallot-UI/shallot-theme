@@ -1,5 +1,7 @@
 import { CSSObject, DefaultTheme } from 'styled-components'
 
+export type Palette = Record<keyof DefaultTheme['colors'], string>
+
 export type Typeface = {
   name: string
   alternates?: string[]
