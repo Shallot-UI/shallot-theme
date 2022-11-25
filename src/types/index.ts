@@ -31,6 +31,7 @@ export interface ColorProps {
   backgroundColor?: keyof DefaultTheme['colors']
   textColor?: keyof DefaultTheme['colors']
   borderColor?: keyof DefaultTheme['colors']
+  fillColor?: keyof DefaultTheme['colors']
 }
 
 export interface CursorProps {
