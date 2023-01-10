@@ -13,7 +13,7 @@ export type Typeface = {
 
 export interface BorderProps {
   borderWidth?: number
-  borderColor?: string
+  borderColor?: keyof DefaultTheme['colors']
   borderPosition?: 'all' | 'top' | 'right' | 'bottom' | 'left'
 }
 
