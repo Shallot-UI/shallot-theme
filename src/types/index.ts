@@ -60,6 +60,7 @@ export interface RadiusProps {
 }
 
 export interface SizingProps {
+  fullWidth?: boolean
   unitWidth?: number | number[]
   minUnitWidth?: number | number[]
   maxUnitWidth?: number | number[]
